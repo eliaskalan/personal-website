@@ -1,0 +1,10 @@
+.mainContainer{
+    max-width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* Small devices (portrait tablets and large phones, 576px and up) */
+    @media only screen and (min-width: 576px) {max-width:540px}
+  
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 700px) {max-width:672px}  
+  }
