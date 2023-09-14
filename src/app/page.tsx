@@ -3,11 +3,12 @@ import styles from './page.module.css';
 import layout from './layouts.module.css';
 import Badge from '@/components/badge/badge';
 import LinkCard from '@/components/linkCard/linkCard';
+
 export default function Home() {
   return (
     <main className={layout.mainContainer}>
-      <h1>hey, I'm Ilias 👋</h1>
-      <p>I'm a frontend developer, optimist, and community builder. I currently work as the VP of Developer Experience at 
+      <h1>hey, I&apos;m Ilias 👋</h1>
+      <p>I&apos;m a frontend developer, optimist, and community builder. I currently work as the VP of Developer Experience at 
         <span className={layout.iconSpace}>
           <Badge img='./favicon.ico' link='https://vercel.com/'>Vercel</Badge>
         </span>
@@ -23,30 +24,30 @@ export default function Home() {
       <div className={styles.imageGrid}>
         <figure className={styles.imageItem}>
           <Image
-              srcset="images/image.jpg"
-              
-              height={300}
-              width={200}
-            />
+            src="/images/image.jpg"
+            alt="image"
+            height={300}
+            width={200}
+          />
         </figure>
         
-          <figure className={styles.imageItem}>
-            <Image
-                srcset="images/image.jpg" 
-                width={200}
-                height={200}
-              />
-          </figure>
+        <figure className={styles.imageItem}>
+          <Image
+            src="/images/image.jpg"
+            alt="image"
+            width={200}
+            height={200}
+          />
+        </figure>
         
-        
-          <figure className={styles.imageItem}>
-            <Image
-                srcset="images/image.jpg" 
-                width={220}
-                height={400}
-                
-              />
-          </figure>
+        <figure className={styles.imageItem}>
+          <Image
+            src="/images/image.jpg"
+            alt="image"
+            width={220}
+            height={400}
+          />
+        </figure>
       </div>
       <div>
         <p>
@@ -63,13 +64,13 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.cardSpace}>
-        <LinkCard>Information Retrival</LinkCard>
-        <LinkCard>Information Retrival</LinkCard>
-        <LinkCard>Information Retrival</LinkCard>
+        <LinkCard>Information Retrieval</LinkCard>
+        <LinkCard>Information Retrieval</LinkCard>
+        <LinkCard>Information Retrieval</LinkCard>
       </div>
       <div>
-        <p>I invest small angel checks into early stage startups building tools for developers.</p>
+        <p>I invest small angel checks into early-stage startups building tools for developers.</p>
       </div>
     </main>
-  )
+  );
 }
