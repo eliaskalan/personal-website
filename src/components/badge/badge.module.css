@@ -1,3 +1,27 @@
 .containerBadge{
-    border: 1px solid white;
+    border: 1px solid ;
+    border-color: rgb(64 64 64);
+    background-color: rgb(38 38 38);
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem;
+    
 }
+.containerBadge::after{
+    border: 0 solid #e5e7eb;
+}
+.icon {
+    width: 1em; /* You can adjust the width and height as needed */
+    height: 1em;
+    margin-right: 0.25em; /* Add some spacing between the icon and text */
+    margin-left: 0.25em;
+  }
+  
+  .text {
+    font-size: .875rem; /* Set the font size for the text to match the icon */
+    text-decoration: none; /* Remove underlines from the link */
+    color: white;
+    margin-right: 0.25em;
+    
+  }
