@@ -22,8 +22,8 @@ export default function Home() {
       </p>
       <div className={styles.imageGrid}>
         <figure className={styles.imageItem}>
-          <img
-              src="images/image.jpg"
+          <Image
+              srcset="images/image.jpg"
               
               height={300}
               width={200}
@@ -31,8 +31,8 @@ export default function Home() {
         </figure>
         
           <figure className={styles.imageItem}>
-            <img
-                src="images/image.jpg" 
+            <Image
+                srcset="images/image.jpg" 
                 width={200}
                 height={200}
               />
@@ -40,8 +40,8 @@ export default function Home() {
         
         
           <figure className={styles.imageItem}>
-            <img
-                src="images/image.jpg" 
+            <Image
+                srcset="images/image.jpg" 
                 width={220}
                 height={400}
                 
