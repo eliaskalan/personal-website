@@ -15,11 +15,17 @@
     margin-bottom: 20px;
     
 }
+
+@media screen and (max-width: 700px) {
+    .containerLinkedCard {
+        width: auto ;
+    }
+  }
 .containerLinkedCard a {
     text-decoration: none; /* Remove the underline from the link */
     color: white; /* Set the link color */
     
-  }
+}
 .card{
     display: flex;
     align-items: center;

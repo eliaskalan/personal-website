@@ -1,23 +1,23 @@
 import styles from "./linkCard.module.css";
 
-const linkCard = ({ img, link, children }: { img?: string; link?: string; children?: string }) => {
-  const hasImage = !!img; 
+const linkCard = ({ img1,img2, link, followers, children }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string }) => {
+  const hasImage = !!img1; 
 
   return (
     <a className={styles.containerLinkedCard} href={link || "https://www.linkedin.com/in/ilias-kalantzis/"}>
       <div className={styles.card}>
         {hasImage && (
           <div className={styles.logoImage}>
-            {img && <img src={img} alt="Image" className={`${styles.icon} ${styles.imageStyle}`} />}
+            {img1 && <img src={img1} alt="Image" className={`${styles.icon} ${styles.imageStyle}`} />}
             <div className={styles.subImage}>
-              {img && <img src={img} alt="Image" className={`${styles.icon} ${styles.imageStyle}`} />}
+              {img2 && <img src={img2} alt="Image" className={`${styles.icon} ${styles.imageStyle}`} />}
             </div>
           </div>
         )}
         <div className={styles.text}>
           {!hasImage && <p className={styles.fontBold}> {children} </p>}
           {hasImage && <p className={styles.fontBold}>{children}</p>}
-          <p className={styles.subText}>11 connections</p>
+          <p className={styles.subText}>{followers}</p>
         </div>
       </div>
       <div>
