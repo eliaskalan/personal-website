@@ -85,7 +85,7 @@ export default function Home() {
       </div>
       <div>
         <p className={styles.lineSpacing}>
-        "In the realm of my standout projects, I&apos;ve ventured into the dynamic worlds of Android development and Kotlin expertise while weaving a passion for user-centered design. 
+        In the realm of my standout projects, I&apos;ve ventured into the dynamic worlds of Android development and Kotlin expertise while weaving a passion for user-centered design. 
         First, as part of my distributed systems coursework, I crafted a robust Java-based backend to power a distributed messaging app for group chats, seamlessly connecting with an 
         <span className={styles.iconSpace}>
             <Badge img='./images/icons/android_icon.png' link='https://vercel.com/'>Android</Badge>
@@ -96,7 +96,7 @@ export default function Home() {
             <Badge img='./images/icons/kotlin_icon.png' link='https://vercel.com/'>Kotlin</Badge>
         </span>
         Kotlin to reimagine a real dishwasher&apos;s user interface, with a keen focus on enhancing usability, following a meticulous helical model development approach.  Whether you seek a skilled Android developer, a Kotlin enthusiast, or a UX/UI design aficionado, 
-        I&apos;m poised to embark on your next tech endeavor. Let&apos;s connect and bring your vision to life. 😉👨‍💻"
+        I&apos;m poised to embark on your next tech endeavor. Let&apos;s connect and bring your vision to life. 😉👨‍💻
         </p>
       </div>
       <div className={styles.cardSpace}>
