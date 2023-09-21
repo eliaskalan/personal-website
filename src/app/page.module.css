@@ -1,22 +1,24 @@
 
 .containerLinkedCards{
     display: flex;
-   
     flex-direction: column;
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 700px) {
-      flex-direction:row;
-      gap: 20px;
-      margin-right:10px;
-    }
+}
 
+@media only screen and (min-width: 700px) {
+  .containerLinkedCards{
+  flex-direction:row;
+  gap: 20px;
+  margin-right:10px;
+  }
 }
 
 .iconSpace{
     margin-left: 5px;
     margin-right: 5px;
 }
-
+.lineSpacing {
+  line-height: 1.5; 
+}
 .cardSpace{
     margin-top: 20px;
 }
@@ -25,30 +27,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 70px);
   gap: 20px;
-
-  /* Add styles to prevent overlap with text below */
   position: relative;
-  z-index: 1; /* Ensure the gallery is above other content */
-}
-
-@media screen and (max-width: 700px) {
-  .gallery {
-    display: block;
-    margin: 0; /* Remove margin that causes overlap */
-    grid-template-columns: auto; /* Reset column layout */
-    grid-template-rows: auto; /* Reset row layout */
-    gap: 0; /* Remove gap between items */
-
-    /* Ensure the height of the container doesn't overlap with content below */
-    height: auto; /* Adjust as needed */
-  }
+  z-index: 1; 
 }
 
 .gallery__item {
   text-align: center; /* Center the content horizontally */
   object-fit: cover;
   display: block;
- 
   margin-bottom: 10px;
 
 }
@@ -91,6 +77,14 @@
 }
 
 @media screen and (max-width: 700px) {
+  .gallery {
+    display: block;
+    margin: 0; 
+    grid-template-columns: auto; 
+    grid-template-rows: auto; 
+    gap: 0; 
+    height: auto; 
+  }
   .gallery__item_1{
     display: none;
   }
@@ -107,7 +101,6 @@
     grid-column: span 3;
   }
   
-  /* Adjust the remaining item to fill the width */
   .gallery__item_6 {
     display: none;
     height: 100%;
