@@ -106,8 +106,8 @@ export default function Home({repositories} : {repositories: any} ) {
       </div>
       <div className={styles.cardSpace}>
         {
-          repositories.map((repo: { name: string; html_url:string; visibility:string }, index:number) => {
-            if(repo.visibility == "public"){
+          repositories.map((repo: { name: string; html_url:string; visibility:string; archived:boolean }, index:number) => {
+            if(repo.visibility == "public" && !repo.archived){
               return (<LinkCard key={index} link={repo.html_url}>{repo.name}</LinkCard>)
             }
             
