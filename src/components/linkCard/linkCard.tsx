@@ -2,9 +2,8 @@ import styles from "./linkCard.module.css";
 
 const linkCard = ({ img1,img2, link, followers, children }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string }) => {
   const hasImage = !!img1; 
-
   return (
-    <a className={styles.containerLinkedCard} href={link || "https://www.linkedin.com/in/ilias-kalantzis/"}>
+    <a className={styles.containerLinkedCard} href={link}>
       <div className={styles.card}>
         {hasImage && (
           <div className={styles.logoImage}>
