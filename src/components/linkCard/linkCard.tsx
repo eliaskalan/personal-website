@@ -1,7 +1,9 @@
 import styles from "./linkCard.module.css";
 
-const linkCard = ({ img1,img2, link, followers, children }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string }) => {
-  const hasImage = !!img1; 
+const linkCard = ({ img1,img2, link, followers, children,description,topics }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string; description?:string;topics?: string[]}) => {
+  const hasImage = !!img1;
+  const hasDescreption = !!description;
+  const hasTopics=!!topics;
   return (
     <a className={styles.containerLinkedCard} href={link}>
       <div className={styles.card}>
@@ -17,6 +19,12 @@ const linkCard = ({ img1,img2, link, followers, children }: { img1?: string; img
           {!hasImage && <p className={styles.fontBold}> {children} </p>}
           {hasImage && <p className={styles.fontBold}>{children}</p>}
           <p className={styles.subText}>{followers}</p>
+          {hasDescreption && <p className={styles.subText}> {description}</p>}
+          {hasTopics && (
+              <p className={styles.subText}>
+                  {topics.join(', ')}
+              </p>
+          )}
         </div>
       </div>
       <div>

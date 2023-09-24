@@ -40,22 +40,22 @@ export default function Home({repositories} : {repositories: any} ) {
       <div className={styles.container}>
         <div className={styles.gallery}>
           <div className={`${styles.gallery__item} ${styles.gallery__item_1}`}>
-            <Image src="/images/grid/received_1361751994624546.jpeg" alt="Image 1" width={210} height={160} />
+            <Image src="/images/grid/received_1361751994624546.jpeg" alt="Image 1" width={210} height={160}  objectFit="cover"/>
           </div>
           <div className={`${styles.gallery__item} ${styles.gallery__item_2}`}>
-            <Image src="/images/grid/IMG-20220906-WA0008.jpg" alt="Image 2" width={210} height={250} />
+            <Image src="/images/grid/IMG-20220906-WA0008.jpg" alt="Image 2" width={210} height={250}  objectFit="cover"/>
           </div>
           <div className={`${styles.gallery__item} ${styles.gallery__item_3}`}>
-            <Image src="/images/grid/DSC_0047.JPG" alt="Image 3" width={210} height={160} />
+            <Image src="/images/grid/DSC_0047.JPG" alt="Image 3" width={210} height={160} objectFit="cover" />
           </div>
           <div className={`${styles.gallery__item} ${styles.gallery__item_4}`}>
-            <Image src="/images/grid/IMG_1431.jpg" alt="Image 4" width={210} height={250} />
+            <Image src="/images/grid/IMG_1431.jpg" alt="Image 4" width={210} height={250} objectFit="cover" />
           </div>
           <div className={`${styles.gallery__item} ${styles.gallery__item_5}`}>
-            <Image src="/images/grid/received_1451415745605299.jpeg" alt="Image 5" width={210} height={160} />
+            <Image src="/images/grid/received_1451415745605299.jpeg" alt="Image 5" width={210} height={160}  objectFit="cover"/>
           </div>
           <div className={`${styles.gallery__item} ${styles.gallery__item_6}`}>
-            <Image src="/images/grid/IMG-20221211-WA0054.jpg" alt="Image 6" width={210} height={250} />
+            <Image src="/images/grid/IMG-20221211-WA0054.jpg" alt="Image 6" width={210} height={250} objectFit="cover"/>
           </div> 
         </div>
       </div>
@@ -106,9 +106,9 @@ export default function Home({repositories} : {repositories: any} ) {
       </div>
       <div className={styles.cardSpace}>
         {
-          repositories.map((repo: { name: string; html_url:string; visibility:string; archived:boolean }, index:number) => {
+          repositories.map((repo: { name: string; html_url:string; visibility:string; archived:boolean; description:string; topics: string[] }, index:number) => {
             if(repo.visibility == "public" && !repo.archived){
-              return (<LinkCard key={index} link={repo.html_url}>{repo.name}</LinkCard>)
+              return (<LinkCard key={index} link={repo.html_url} description={repo.description } topics={repo.topics}>{repo.name}</LinkCard>)
             }
             
           }
