@@ -1,0 +1,61 @@
+{
+    "programming_languages": [
+      {
+        "name": "javascript",
+        "logo_svg": "/images/icons/js_icon.png"
+      },
+      {
+        "name": "python",
+        "logo_svg": "/images/icons/python_icon.png"
+      }
+      ,{
+        "name": "android",
+        "logo_svg": "/images/icons/android_icon.png"
+      },
+      {
+        "name": "sql",
+        "logo_svg": "/images/icons/sql_icon.png"
+      }
+      ,{
+        "name": "postgresql",
+        "logo_svg": "/images/icons/postgresql_icon.png"
+      },
+      {
+        "name": "kotlin",
+        "logo_svg": "/images/icons/kotlin_icon.png"
+      }
+      ,{
+        "name": "java",
+        "logo_svg": "/images/icons/java_icon.png"
+      },
+      {
+        "name": "cplusplus",
+        "logo_svg": "/images/icons/cplusplus_icon.png"
+      }
+      ,{
+        "name": "css",
+        "logo_svg": "/images/icons/css_icon.png"
+      },
+      {
+        "name": "nextjs",
+        "logo_svg": "/images/icons/nextjs_icon.png"
+      }
+      ,{
+        "name": "nodejs",
+        "logo_svg": "/images/icons/nodejs_icon.png"
+      },
+      {
+        "name": "html",
+        "logo_svg": "/images/icons/html_icon.png"
+      }
+      ,{
+        "name": "typescript",
+        "logo_svg": "/images/icons/typescript_icon.png"
+      },
+      {
+        "name": "python",
+        "logo_svg": "/images/icons/python_icon.png"
+      }
+    ]
+  }
+  

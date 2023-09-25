@@ -3,12 +3,11 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import layout from './layouts.module.css';
 import Badge from '@/components/badge/badge';
-import LinkCard from '@/components/linkCard/linkCard';
-import { useEffect } from 'react';
+import LinkCard from '@/components/linkCard';
+
 
 
 export default function Home({repositories} : {repositories: any} ) {
-
   return (
     <main className={layout.mainContainer}>
       <h1>hey, I&apos;m Ilias 👋</h1>
@@ -105,9 +104,9 @@ export default function Home({repositories} : {repositories: any} ) {
         </p>
       </div>
       <div className={styles.cardSpace}>
-        {
-          repositories.map((repo: { name: string; html_url:string; visibility:string; archived:boolean; description:string; topics: string[] }, index:number) => {
+        {repositories?.map((repo: { name: string; html_url:string; visibility:string; archived:boolean; description:string; topics: string[] }, index:number) => {
             if(repo.visibility == "public" && !repo.archived){
+          
               return (<LinkCard key={index} link={repo.html_url} description={repo.description } topics={repo.topics}>{repo.name}</LinkCard>)
             }
             

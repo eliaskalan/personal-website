@@ -1,9 +1,33 @@
-import styles from "./linkCard.module.css";
+"use client"
 
-const linkCard = ({ img1,img2, link, followers, children,description,topics }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string; description?:string;topics?: string[]}) => {
+import styles from "./linkCard.module.css";
+import Badge from '@/components/badge/badge';
+import data from '../../../public/programming_languages.json'
+import {useEffect, useState} from 'react';
+import {ITopics} from './linkCard.d';
+
+
+const LinkCard = ({ img1,img2, link, followers, children,description,topics }: { img1?: string; img2?: string; link?: string; followers?: string; children?: string; description?:string;topics?: string[]}) => {
   const hasImage = !!img1;
   const hasDescreption = !!description;
-  const hasTopics=!!topics;
+  const [topicsBadge, setTopicsBadge] = useState<ITopics[]>([]);
+  
+  useEffect(() => {
+    if(!topics){
+      return;
+    }
+    const newTopicsBade: ITopics[] = topics?.map((topicName) => {
+      const programmingLanguage = data.programming_languages.find(
+        (language) => language.name === topicName
+      );
+      return {logo : programmingLanguage ? programmingLanguage.logo_svg : '', name: topicName}
+    })
+    if(newTopicsBade){
+      setTopicsBadge(newTopicsBade)
+    }
+
+  }, [topics])
+
   return (
     <a className={styles.containerLinkedCard} href={link}>
       <div className={styles.card}>
@@ -20,11 +44,15 @@ const linkCard = ({ img1,img2, link, followers, children,description,topics }: {
           {hasImage && <p className={styles.fontBold}>{children}</p>}
           <p className={styles.subText}>{followers}</p>
           {hasDescreption && <p className={styles.subText}> {description}</p>}
-          {hasTopics && (
-              <p className={styles.subText}>
-                  {topics.join(', ')}
-              </p>
-          )}
+     
+                   <div>
+                   {topicsBadge.map((topic, index) => (
+                    <span key={index} className={styles.badgeTopics} >
+                       <Badge  img={topic.logo}>{topic.name}</Badge>
+                    </span>
+                   ))}
+                 </div>
+        
         </div>
       </div>
       <div>
@@ -36,7 +64,7 @@ const linkCard = ({ img1,img2, link, followers, children,description,topics }: {
   );
 };
 
-export default linkCard;
+export default LinkCard;
 
 
 
