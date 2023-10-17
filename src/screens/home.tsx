@@ -12,7 +12,7 @@ export default function Home({repositories} : {repositories: any} ) {
     <main className={layout.mainContainer}>
       <h1>hey, I&apos;m Ilias 👋</h1>
       <p className={styles.lineSpacing}>
-      Hello there! 🚀 I&apos;m Elias Kalantzis, an aspiring developer who&apos;s passionate about merging creativity with technology. Allow me to paint a picture: I&apos;m a student at Athens University of Economics and Business by day, 
+      Hello there! 🚀 I&apos;m an aspiring developer who&apos;s passionate about merging creativity with technology. Allow me to paint a picture: I&apos;m a student at Athens University of Economics and Business by day, 
       and by night, I weave the intricate tapestry of web development using
         <span className={styles.iconSpace}>
           <Badge img='./images/icons/html_icon.png' link='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</Badge>
