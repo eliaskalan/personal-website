@@ -29,7 +29,7 @@ const LinkCard = ({ img1,img2, link, followers, children,description,topics }: {
   }, [topics])
 
   return (
-    <a className={styles.containerLinkedCard} href={link}>
+    <a className={styles.containerLinkedCard} href={link} target="_blank">
       <div className={styles.card}>
         {hasImage && (
           <div className={styles.logoImage}>

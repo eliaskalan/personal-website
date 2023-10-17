@@ -84,8 +84,8 @@ export default function Home({repositories} : {repositories: any} ) {
         </p>
       </div>
       <div className={styles.containerLinkedCards}>
-        <LinkCard img1='./images/icons8-github-100.png' link='https://github.com/eliaskalan' followers='3 followers'> @eliaskalan </LinkCard>
-        <LinkCard img1='./images/linkedin-96.png' link='https://www.linkedin.com/in/ilias-kalantzis/' followers='12 followers'> Ilias Kalantzis </LinkCard>
+        <LinkCard img1='./images/icons8-github-100.png' link='https://github.com/eliaskalan' followers='Code with me'> @eliaskalan </LinkCard>
+        <LinkCard img1='./images/linkedin-96.png' link='https://www.linkedin.com/in/ilias-kalantzis/' followers='Connect with me'> Ilias Kalantzis </LinkCard>
       </div>
       <div>
         <p className={styles.lineSpacing}>
