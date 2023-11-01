@@ -103,6 +103,9 @@ export default function Home({repositories} : {repositories: any} ) {
           I&apos;m poised to embark on your next tech endeavor. Let&apos;s connect and bring your vision to life. 😉👨‍💻
         </p>
       </div>
+      <div>
+        <LinkCard link="https://buybook.gr/?utm_source=eliaskalan&utm_medium=project&utm_campaign=buybook" description="For bussiness idea validation we developed several tools to process and collect data from the web. We created a library of scrapy tools to mine the information and pandas to process it appropriately. At the same time we created small databases and scripts to easily present the data to non-technical people" topics={["python","pandas","scrapy","plausible","postgresql"]}>BuyBook</LinkCard>
+      </div>
       <div className={styles.cardSpace}>
         {repositories?.map((repo: { name: string; html_url:string; visibility:string; archived:boolean; description:string; topics: string[] }, index:number) => {
             if(repo.visibility == "public" && !repo.archived){
